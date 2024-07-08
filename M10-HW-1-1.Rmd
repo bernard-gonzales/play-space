@@ -17,7 +17,7 @@ output: pdf_document
 
     Name: Bernard Gonzales
     Ned ID: qja8kc
-    URL of this file on GitHub:
+    URL of this file on GitHub: https://github.com/bernard-gonzales/play-space/blob/main/M10-HW-1-1.Rmd 
 
 # Instructions
 
@@ -125,9 +125,9 @@ the appropriate row in your first dataframe to get the answer.
 payout <- 
 function(percent) {     
     if (percent == lookup[1, 4]) {
-      return lookup[2, 4]
+      return lookup$cum_payout[4]
     } else if (percent >= lookup[1, 3]) {
-      return lookup[2, 3] + (percent * 225000 - 202500) * 0.16
+      return lookup$cum_payout[3] + (percent * 225000 - 202500) * 0.16
     } else if (percent >= lookup[1, 2]) {
       return lookup[2, 2] + (percent * 225000 - 157500) * 0.13
     } else if (percent >= lookup[1, 1]) {
